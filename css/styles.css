@@ -44,14 +44,13 @@ body {
 }
 
 .container {
-  width: 1158px;
-  padding: 0 15px;
+  width: 100%;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
 .list {
   list-style: none;
-  display: flex;
   gap: 24px;
 }
 
@@ -83,8 +82,8 @@ body {
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 /*------------- Header -------------*/
@@ -232,19 +231,8 @@ body {
 
 /*------------- Strategy -------------*/
 
-.strategy-list {
-  width: calc((100% - 3 * 24px) / 4);
-}
-
 .strategy-item {
-  width: 100%;
-  height: 112px;
-  background-color: var(--cloud-footer-color);
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 8px;
+  display: none;
 }
 
 .strategy-icon {
@@ -252,15 +240,10 @@ body {
   height: 64px;
 }
 
-.container-work {
-  display: flex;
-  flex-direction: column;
-}
-
 /*------------- Work -------------*/
 
 .section-work {
-  padding-bottom: 120px;
+  display: none;
 }
 
 .section-title {
@@ -273,14 +256,10 @@ body {
   margin-bottom: 72px;
 }
 
-.work-list {
-  width: calc((100% - 2 * 24px) / 3);
-}
-
 /*------------- Cloud -------------*/
 
 .section-cloud {
-  padding: 120px 0;
+  padding: 96px 0;
   background: var(--cloud-footer-color);
 }
 
@@ -293,12 +272,13 @@ body {
 }
 
 .section-list {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--header-color);
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .text-team {
@@ -307,6 +287,7 @@ body {
 
 .text {
   color: var(--text-color);
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -355,10 +336,12 @@ body {
 
 .customers-list {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 72px;
 }
 
 .customers-item {
-  width: calc((100% - 5 * 24px) / 6);
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
 
@@ -794,6 +777,123 @@ body {
   margin: 0 auto;
 }
 
+/*------------- Media -------------*/
+
+@media screen and (min-width: 428px) {
+  .container {
+    max-width: 428px;
+  }
+  .container-customers {
+    max-width: 396px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .strategy-list:not(:first-child) {
+    padding-top: 72px;
+  }
+  .customers-list {
+    column-gap: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list {
+    display: flex;
+  }
+
+  .container {
+    max-width: 736px;
+  }
+
+  .strategy-list {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .strategy-header {
+    text-align: left;
+  }
+
+  .container-customers {
+    max-width: 552px;
+  }
+
+  .customers-item {
+    width: calc((100% - 2 * 24px) / 3);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1157px) {
+  .strategy-list:not(:nth-child(-n + 2)) {
+    padding-top: 72px;
+  }
+  .list-strat {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .container {
+    max-width: 1158px;
+  }
+
+  .text {
+    font-weight: 400;
+  }
+
+  .strategy-list {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+
+  .strategy-item {
+    width: 100%;
+    height: 112px;
+    background-color: var(--cloud-footer-color);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .section-list {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  /*------------- Work -------------*/
+  .section-work {
+    display: block;
+    padding-bottom: 120px;
+  }
+
+  .container-work {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .work-list {
+    width: calc((100% - 2 * 24px) / 3);
+  }
+
+  .section-cloud {
+    padding: 120px 0;
+  }
+
+  .container-customers {
+    max-width: 1128px;
+  }
+
+  .customers-item {
+    width: calc((100% - 5 * 24px) / 6);
+  }
+}
+
 /*------------- Frames -------------*/
 
 @keyframes social-icon {
@@ -823,26 +923,5 @@ body {
 
   100% {
     transform: rotate(0deg);
-  }
-}
-
-@keyframes heartbeat {
-  0% {
-    transform: scale(0.75);
-  }
-  20% {
-    transform: scale(1);
-  }
-  40% {
-    transform: scale(0.75);
-  }
-  60% {
-    transform: scale(1);
-  }
-  80% {
-    transform: scale(0.75);
-  }
-  100% {
-    transform: scale(0.75);
   }
 }
