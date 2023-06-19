@@ -890,7 +890,7 @@ body {
   }
 
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 
   .button-burger {
@@ -1006,11 +1006,12 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1157px) {
-  .strategy-list:not(:nth-child(-n + 2)) {
+  /* .strategy-list:not(:nth-child(-n + 2)) {
     padding-top: 48px;
-  }
+  } */
   .list-strat {
     flex-wrap: wrap;
+    gap: 72px 24px;
   }
   .list-cloud {
     row-gap: 64px;
@@ -1022,7 +1023,7 @@ body {
     gap: 72px 24px;
   }
   .section-cloud > .container,
-  .section > .container,
+  .section > .container-customers,
   .footer > .container {
     width: 584px;
   }
