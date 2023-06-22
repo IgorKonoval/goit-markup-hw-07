@@ -583,7 +583,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 48px;
+  gap: 48px;
 }
 
 .image-link {
@@ -625,6 +625,22 @@ body {
   padding: 32px 16px;
   border: 1px solid var(--border-color);
   border-top: none;
+}
+
+.section-list-portfolio {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--header-color);
+  margin-bottom: 8px;
+}
+
+.text-portfolio {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 /*------------- Modal -------------*/
@@ -1018,6 +1034,11 @@ body {
     width: 408px;
     padding: 72px 24px 24px 24px;
   }
+
+  .button-list {
+    justify-content: center;
+    margin-bottom: 64px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1157px) {
@@ -1171,6 +1192,10 @@ body {
   }
   .footer-email {
     margin-left: 80px;
+  }
+
+  .button-list {
+    margin-bottom: 72px;
   }
 }
 
