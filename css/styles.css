@@ -840,6 +840,11 @@ body {
 }
 
 /*------------- Media -------------*/
+@media screen and (max-width: 356px) {
+  .section-list-portfolio {
+    font-size: 16px;
+  }
+}
 
 @media screen and (max-width: 427px) {
   .modal {
@@ -1043,6 +1048,7 @@ body {
     flex-direction: row;
     gap: 72px 24px;
     flex-wrap: wrap;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1157px) {
