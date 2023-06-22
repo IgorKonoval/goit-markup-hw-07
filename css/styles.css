@@ -1039,6 +1039,10 @@ body {
     justify-content: center;
     margin-bottom: 64px;
   }
+  .gallery-list {
+    flex-direction: row;
+    gap: 72px 24px;
+    flex-wrap: wrap;
 }
 
 @media (min-width: 768px) and (max-width: 1157px) {
@@ -1157,7 +1161,7 @@ body {
   }
 
   .section-portfolio {
-    padding-top: 100px;
+    padding-top: 72px;
     padding-bottom: 120px;
   }
   .button-list {
@@ -1196,6 +1200,9 @@ body {
 
   .button-list {
     margin-bottom: 72px;
+  }
+  .gallery-list {
+    gap: 48px 24px;
   }
 }
 
